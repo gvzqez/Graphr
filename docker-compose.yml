@@ -18,8 +18,9 @@ services:
     volumes:
       - ./:/var/www
       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
-      - ./../scrapr/images:/var/www/public/img/fonts
-      - ./../scrapr/files:/var/www/public/files/fonts
+      - ./../Scrapr/images:/var/www/public/img/fonts
+      - ./../Scrapr/files:/var/www/public/files/fonts
+      - ./../Scrapr/meta:/var/www/public/files/meta
     networks:
       - app-network
 
@@ -35,8 +36,9 @@ services:
     volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
-      - ./../scrapr/images:/var/www/public/img/fonts
-      - ./../scrapr/files:/var/www/public/files/fonts
+      - ./../Scrapr/images:/var/www/public/img/fonts
+      - ./../Scrapr/files:/var/www/public/files/fonts
+      - ./../Scrapr/meta:/var/www/public/files/meta
     networks:
       - app-network
 
