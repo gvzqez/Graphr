@@ -22,7 +22,7 @@ class DashboardController extends Controller
      */
     public function index() {
         $categories = ParentCategory::all();
-        $fonts = Font::with('images', 'files', 'category')->take(5)->get();
+        $fonts = Font::with('images', 'files', 'category')->take(15)->get();
         return view('dashboard', ['categories' => $categories, 'fonts' => $fonts]);
     }
 }

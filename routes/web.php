@@ -18,7 +18,5 @@
 Auth::routes();
 
 Route::get('/', 'DashboardController@index')->name('home');
-
 Route::get('/{slug}', 'FontController@get');
-
 Route::get('/category/{slug}', 'CategoryController@get')->name('category');
