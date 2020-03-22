@@ -30,7 +30,7 @@
             <div class="col-2">
                 <div class="card-buttons">
                     <button type="button" class="btn btn-dark card-button" onclick="downloadZip('{{route('download',$font->slug)}}')">Download</button>
-                    <button type="button" class="btn btn-light card-button-sm" onclick="">Donate Designer</button>
+                    {{--<button type="button" class="btn btn-light card-button-sm" onclick="">Donate Designer</button>--}}
                 </div>
             </div>
         </div>
