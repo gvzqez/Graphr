@@ -50,13 +50,14 @@ class FontController extends Controller {
 
         $fontTypes = [];
         foreach($font->files as $fontFile) {
-            $fontType = explode('.', $fontFile->source)[1];
-            if (!in_array($fontType, $fontTypes)) {
-                if ($fontType == 'ttf') {
-                    $fontTypes[] = "TrueType (.ttf)";
-                } elseif ($fontType == 'otf') {
-                    $fontTypes[] = "OpenType (.otf)";
-                }
+            $type = explode('.', $fontFile->source)[1];
+            if ($type == 'ttf') {
+                $fontType = "TrueType (.ttf)";
+            } elseif ($type == 'otf') {
+                $fontType = "OpenType (.otf)";
+            }
+            if (isset($fontType) && !in_array($fontType, $fontTypes)) {
+                $fontTypes[] = $fontType;
             }
         }
 

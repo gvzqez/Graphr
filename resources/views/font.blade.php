@@ -9,9 +9,13 @@
                     <a href="{{'/fonts/author/'.$font->author->slug}}">{{$font->author->name}}</a>
                 </div>
                 @if(!is_null($font->category->parent) and $font->category->parent->name != $font->category->name)
-                    <div class="card-tag">{{$font->category->parent->name}}</div>
+                    <div class="card-tag">
+                        <a href="{{'/category/'.$font->category->parent->slug}}">{{$font->category->parent->name}}</a>
+                    </div>
                 @endif
-                <div class="card-tag">{{$font->category->name}}</div>
+                <div class="card-tag">
+                    <a href="{{'/category/'.$font->category->slug}}">{{$font->category->name}}</a>
+                </div>
             </div>
             <div class="card-body row">
                 <div class="col-10">
