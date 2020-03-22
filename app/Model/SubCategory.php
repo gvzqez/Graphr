@@ -11,8 +11,8 @@ class SubCategory extends Category {
         static::addGlobalScope(new SubCategoryScope());
     }
 
-    public function fonts() {
-        return $this->hasMany(Font::class, 'category_id')->with('images', 'files');
+    public function parent() {
+        return $this->belongsTo(ParentCategory::class, 'parent_id');
     }
 
 }

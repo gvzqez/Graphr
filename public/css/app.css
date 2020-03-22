@@ -10940,14 +10940,78 @@ a.text-dark:focus {
     }
 }
 
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    font-size: 13px;
+}
+
+.card-header {
+    height: 50px;
+}
+
 .card-tag {
     float:right;
     background: lightblue;
     border: 1px solid lightblue;
     border-radius: 5px;
-    padding: 3px;
+    padding: 0 5px;
+    margin-left: 5px;
     color: royalblue;
     font-weight: bold;
 }
 
+.card-title {
+    float: left;
+}
 
+.card-body img {
+    max-width: 100%;
+    max-height: 100px;
+    height: auto;
+}
+
+.card-button {
+    float: right;
+    font-size: 12px;
+    padding: 5px 8px;
+    margin: 5px 0;
+    width: 100px !important;
+}
+
+.card-button-sm {
+    float: right;
+    font-size: 10px;
+    padding: 5px 8px;
+    margin: 5px 0;
+    width: 100px !important;
+}
+
+.card-section {
+    padding: 0 2rem;
+}
+
+.card-description {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.card-images {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-info {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card-info-el {
+    background-color: #f8f8f8;
+    margin: 2px 1px;
+    height: 30px;
+    line-height: 2.3;
+}

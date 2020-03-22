@@ -18,5 +18,10 @@
 Auth::routes();
 
 Route::get('/', 'DashboardController@index')->name('home');
-Route::get('/{slug}', 'FontController@get');
-Route::get('/category/{slug}', 'CategoryController@get')->name('category');
+Route::get('/fonts', 'FontController@index')->name('fonts');
+Route::get('/fonts/recent', 'FontController@recent')->name('recent');
+Route::get('/fonts/top', 'FontController@top')->name('top');
+Route::get('/fonts/{slug}', 'FontController@get')->name('font');
+Route::get('/fonts/{slug}/download', 'FontController@download')->name('download');
+Route::get('/fonts/author/{slug}', 'AuthorController@get');
+Route::get('/category/{slug}', 'CategoryController@get');
