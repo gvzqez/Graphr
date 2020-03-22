@@ -24,4 +24,4 @@ Route::get('/fonts/top', 'FontController@top')->name('top');
 Route::get('/fonts/{slug}', 'FontController@get')->name('font');
 Route::get('/fonts/{slug}/download', 'FontController@download')->name('download');
 Route::get('/fonts/author/{slug}', 'AuthorController@get');
-Route::get('/category/{slug}', 'CategoryController@get');
+Route::get('/fonts/category/{slug}', 'CategoryController@get');

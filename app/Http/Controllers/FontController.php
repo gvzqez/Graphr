@@ -72,9 +72,8 @@ class FontController extends Controller {
         $fontDownload->ip = Request::ip();
         $fontDownload->save();
 
-
         $zip = new ZipArchive();
-        $zipName = str_replace(" ", "_", $font->name).".zip";
+        $zipName = "{$font->slug}.zip";
         $zipPath = public_path("/files/zip/");
         if ($zip->open($zipPath . $zipName, ZipArchive::CREATE) === true) {
             foreach($font->files as $fontFile) {

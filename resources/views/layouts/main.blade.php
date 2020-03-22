@@ -8,11 +8,11 @@
         <ul class="nav flex-column pt-2 pl-4 pb-4">
             @foreach(\App\Utils::getCategoryList() as $categoryInList)
                 <li class="nav-item">
-                    <a class="nav-link" href="{{'/category/'.$categoryInList->slug}}">{{$categoryInList->name}}</a>
+                    <a class="nav-link" href="{{'/fonts/category/'.$categoryInList->slug}}">{{$categoryInList->name}}</a>
                     <ul>
                         @foreach($categoryInList->sub_categories as $sub_category)
                             <li class="nav-item">
-                                <a class="nav-link" href="{{'/category/'.$sub_category->slug}}">{{$sub_category->name}}</a>
+                                <a class="nav-link" href="{{'/fonts/category/'.$sub_category->slug}}">{{$sub_category->name}}</a>
                             </li>
                         @endforeach
                     </ul>

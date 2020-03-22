@@ -8,11 +8,11 @@
             </div>
             @if(!is_null($font->category->parent) and $font->category->parent->name != $font->category->name)
                 <div class="card-tag">
-                    <a href="{{'/category/'.$font->category->parent->slug}}">{{$font->category->parent->name}}</a>
+                    <a href="{{'/fonts/category/'.$font->category->parent->slug}}">{{$font->category->parent->name}}</a>
                 </div>
             @endif
             <div class="card-tag">
-                <a href="{{'/category/'.$font->category->slug}}">{{$font->category->name}}</a>
+                <a href="{{'/fonts/category/'.$font->category->slug}}">{{$font->category->name}}</a>
             </div>
         </div>
         <div class="card-body row">
