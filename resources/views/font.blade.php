@@ -30,7 +30,7 @@
                     @endif
                 </div>
                 <div class="col-2">
-                    @if(isset($font->files) and !empty($font->files))
+                    @if(sizeof($font->files) > 0)
                         <div class="card-buttons">
                             <button type="button" class="btn btn-dark card-button" onclick="downloadZip('{{route('download',$font->slug)}}')">Download</button>
                             {{--<button type="button" class="btn btn-light card-button-sm" onclick="">Donate Designer</button>--}}

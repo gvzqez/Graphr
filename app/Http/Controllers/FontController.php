@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Model\Font;
 use App\Model\FontDownload;
-use App\Model\ParentCategory;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use ZipArchive;
@@ -13,6 +12,8 @@ class FontController extends Controller {
 
     public function index() {
         $fonts = Font::with('images', 'files', 'category', 'author')
+            ->whereHas('images')
+            ->whereHas('files')
             ->orderBy('created_at', 'desc')
             ->paginate(20);
         return view('fonts', ['fonts' => $fonts]);
@@ -20,6 +21,8 @@ class FontController extends Controller {
 
     public function recent() {
         $fonts = Font::with('images', 'files', 'category', 'author')
+            ->whereHas('images')
+            ->whereHas('files')
             ->orderBy('created_at', 'desc')
             ->limit(100)
             ->paginate(20);
@@ -28,6 +31,8 @@ class FontController extends Controller {
 
     public function top() {
         $fonts = Font::with('images', 'files', 'category', 'author')
+            ->whereHas('images')
+            ->whereHas('files')
             ->withCount('downloads')
             ->orderBy('downloads_count', 'desc')
             ->limit(100)

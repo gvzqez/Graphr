@@ -5,9 +5,7 @@
     <h3>Fonts</h3>
     <div class="row justify-content-center">
         @foreach($fonts as $font)
-            @if (isset($font->images) and !empty($font->images) and isset($font->files) and !empty($font->files))
-                @include('font_card', ['font' => $font])
-            @endif
+            @include('font_card', ['font' => $font])
         @endforeach
         <div class="pagination">
             {{$fonts->links()}}
